@@ -15,7 +15,7 @@ A Python tool for discovering and resolving subdomains using crt.sh certificate 
 - Resolve subdomains to IP addresses.
 
 Basic Usage
-- `python3 <input_file.csv>` — CSV file of subdomains (optional if using --tld)
+- `python3 crtResolve <input_file.csv>` — CSV file of subdomains (optional if using --tld)
 
  Options
 - `--tld <domain> [output-file]` — Fetch subdomains for a given domain/TLD directly from crt.sh`
