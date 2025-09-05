@@ -1,12 +1,23 @@
-# ResolveCert
+```
+                             ___  
+                            //   ) )                                               
+    ___      **    **  ___ //___/ /   ___      ___      ___     //          ___    
+  //   ) ) //  ) )  / /   / ___ (   //___) ) ((   ) ) //   ) ) // ||  / / //___) ) 
+///       //       / /   //   | |  //         \ \    //   / / //  || / / //
+((____   //       / /   //    | | ((____   //___) ) ((___/ / //   ||/ / ((____  
+```
 
-# Certificate Transparency DNS Resolver
+A Python tool for discovering and resolving subdomains using crt.sh certificate transparency logs.
 
-A Python script that extracts subdomains from Certificate Transparency (CT) logs exported from crt.sh and resolves their IP addresses using DNS lookups. This tool is designed for OSINT (Open Source Intelligence) gathering and reconnaissance activities.
 
-# About
+- Fetch subdomains directly from crt.sh for a given domain/TLD.
+- Parse existing CSV files of subdomains.
+- Resolve subdomains to IP addresses.
 
-This script processes CSV data exported from crt.sh - a Certificate Transparency log search interface. It extracts subdomains from both the Common Name and Subject Alternative Names (SANs) fields in SSL/TLS certificates, then performs DNS resolution to find the IP addresses of active subdomains.
+Basic Usage
+- `python3 <input_file.csv>` — CSV file of subdomains (optional if using --tld)
 
-# Usage
-`python3 crt_dns_resolver.py <input_csv> [output_csv]`
+ Options
+- `--tld <domain> [output-file]` — Fetch subdomains for a given domain/TLD directly from crt.sh`
+- ` --count <N> `— Stop after resolving N subdomains
+- `--out_filename <name>` — Base name for output file (default: resolved_subdomains)`
